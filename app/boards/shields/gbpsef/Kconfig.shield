@@ -1,0 +1,8 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_GAMEBUDDY_LEFT
+	def_bool $(shields_list_contains,gamebuddy_left)
+
+config SHIELD_GAMEBUDDY_RIGHT
+	def_bool $(shields_list_contains,gamebuddy_right)	

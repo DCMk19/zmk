@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEFAULT 0
+#define LOWER 	1
+#define RAISE	2
+#define BT 		3
+
+/ {	
+	behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ESC>, <&mo 3>;
+        };
+    };
+
+	keymap {
+		compatible = "zmk,keymap";
+		
+		default_layer {
+			bindings = <
+                &td0		   	&kp N5      	&kp N1      	&kp N2          &kp N3      	&kp N4                  
+				&kp F14   		&lt 2 GRAVE     &kp Q       	&kp W           &kp E       	&kp R                  
+                &kp F15		   	&kp TAB       	&kp A       	&kp S           &kp D       	&kp F                   
+                &lt 1 G   		&kp LSHFT      	&kp Z       	&kp X           &kp C       	&kp V                  
+                                                    							&kp LCTRL       &kp LALT    	&kp SPACE      				
+			>;  
+		};
+
+		lower_layer {
+			 bindings = <
+				&trans 			&trans			&kp F1			&kp F2			&kp F3			&trans                               
+				&trans			&trans 			&trans 			&trans 			&trans 			&trans                                   
+                &trans 			&trans 			&trans 			&trans 			&trans 			&trans                             
+                &trans		 	&trans			&trans			&trans			&trans 			&kp N                             
+                                                                                &trans			&trans 			&kp M		  		
+			 >;
+		 };
+
+		raise_layer {
+			 bindings = <
+				&trans 			&trans			&kp F1			&kp F2			&kp F3			&trans                               
+				&trans			&trans 			&trans 			&kp C_RW 		&kp C_FF 		&kp C_VOL_UP                                   
+                &trans 			&trans 			&trans 			&kp C_PREV		&kp C_NEXT		&kp C_VOL_DN                             
+                &trans		 	&trans			&trans			&trans			&trans 			&trans                             
+                                                                                &trans			&kp C_SHUFFLE	&kp C_PP		  		
+			 >;
+		 };
+
+		bt_layer {
+			 bindings = <
+				&trans 			&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4                               
+				&none			&none 			&none 			&none 			&none 			&none                                   
+                &none 			&none 			&none 			&none 			&none 			&none                             
+                &none		 	&out OUT_USB	&out OUT_TOG	&out OUT_BLE	&none 			&bt BT_CLR                             
+                                                                                &bootloader		&reset 			&none		  		
+			 >;
+		 };
+	};
+};

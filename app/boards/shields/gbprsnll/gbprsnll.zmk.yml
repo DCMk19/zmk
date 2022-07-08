@@ -1,0 +1,8 @@
+file_format: "1"
+id: gbprsnll
+name: GameBuddy
+type: shield
+url: https://www.clawboards.xyz/shop/p/gamebuddy
+requires: [pro_micro]
+features:
+  - keys

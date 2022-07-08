@@ -1,0 +1,8 @@
+file_format: "1"
+id: gbrmedia
+name: GameBuddy Media
+type: shield
+url: https://www.clawboards.xyz/shop/p/gamebuddy
+requires: [pro_micro]
+features:
+  - keys
