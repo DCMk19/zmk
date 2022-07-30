@@ -20,9 +20,25 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp ESC>, <&mo 3>;
         };
+
+		td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N>, <&mo 1>;
+		};
+
+		h13: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp H>, <&kp F13>;
+		};
     };
 
 	keymap {
@@ -31,9 +47,9 @@
 		default_layer {
 			bindings = <
                 &td0		   	&kp N5      	&kp N1      	&kp N2          &kp N3      	&kp N4                  
-				&kp F14   		&lt 2 GRAVE     &kp Q       	&kp W           &kp E       	&kp R                  
-                &kp F15		   	&kp TAB       	&kp A       	&kp S           &kp D       	&kp F                   
-                &lt 1 G   		&kp LSHFT      	&kp Z       	&kp X           &kp C       	&kp V                  
+				&h13	   		&lt 2 GRAVE     &kp Q       	&kp W           &kp E       	&kp R                  
+                &kp G		   	&kp TAB       	&kp A       	&kp S           &kp D       	&kp F                   
+                &td1	   		&kp LSHFT      	&kp Z       	&kp X           &kp C       	&kp V                  
                                                     							&kp LCTRL       &kp LALT    	&kp SPACE      				
 			>;  
 		};
