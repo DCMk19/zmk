@@ -25,8 +25,8 @@
                 modified_layer {
                         bindings = <
 &kp GRAVE    &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                       &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &kp DEL
-&trans       &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE                        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp GRAVE       &kp TILDE
-&trans       &kp ESC         &kp LGUI        &kp CLCK        &kp LALT        &kp DQT                         &kp HOME        &kp END         &kp PG_UP       &kp PG_DN       &kp PSCRN       &kp RSHFT
+&trans       &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE                        &kp UP          &kp LEFT        &kp DOWN        &kp RIGHT       &kp GRAVE       &kp TILDE
+&trans       &kp ESC         &kp LGUI        &kp RALT        &kp CLCK        &kp DQT                         &kp HOME        &kp END         &kp PG_UP       &kp PG_DN       &kp PSCRN       &kp RSHFT
                                                              &trans          &trans          &kp RET         &mo 3           &trans
                         >;
                 };
@@ -42,7 +42,7 @@
 
                 controls_layer {
                         bindings = <
-&none        &none           &none           &none           &none           &kp N1                          &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
+&none        &none           &none           &none           &none           &none                           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_CLR
 &none        &none           &none           &none           &none           &none                           &none           &none           &none           &none           &none           &bt BT_CLR_ALL
 &none        &none           &none           &none           &none           &none                           &none           &none           &none           &none           &none           &none
                                                              &none           &trans         &tog 3           &trans          &trans
